@@ -587,4 +587,119 @@ body {
     .modal-body {
         padding: 1.5rem;
     }
+}
+
+/* About Us Section */
+#about {
+    background-color: #f8f9fa;
+    padding: 80px 0;
+}
+
+#about img {
+    max-width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+#about img:hover {
+    transform: scale(1.02);
+}
+
+.premium-features .card {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.premium-features .card:hover {
+    transform: translateY(-5px);
+}
+
+.premium-features .card-title {
+    color: #2c3e50;
+    font-weight: 600;
+}
+
+.premium-features .btn-primary {
+    background-color: #2c3e50;
+    border: none;
+    padding: 10px 25px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.premium-features .btn-primary:hover {
+    background-color: #34495e;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Footer */
+footer {
+    background-color: #2c3e50;
+    color: white;
+    padding: 30px 0;
+}
+
+footer h5 {
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+footer p {
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 0;
+}
+
+/* Premium Section */
+.premium-section {
+    padding: 80px 0;
+    background-color: #f8f9fa;
+}
+
+.premium-card {
+    text-align: center;
+    padding: 40px 30px;
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    height: 100%;
+}
+
+.premium-card:hover {
+    transform: translateY(-10px);
+}
+
+.premium-card i {
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+.premium-card h3 {
+    font-size: 1.5rem;
+    color: #2c3e50;
+    margin-bottom: 15px;
+}
+
+.premium-card p {
+    color: #6c757d;
+    margin-bottom: 0;
+}
+
+.premium-btn {
+    background-color: #2c3e50;
+    border: none;
+    padding: 15px 40px;
+    font-size: 1.2rem;
+    font-weight: 500;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+}
+
+.premium-btn:hover {
+    background-color: #34495e;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 } 
