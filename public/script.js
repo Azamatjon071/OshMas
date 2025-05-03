@@ -355,6 +355,34 @@ function logout() {
     window.location.reload();
 }
 
+// Premium Subscription Form Handler
+document.getElementById('premiumForm')?.addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    const phoneNumber = document.getElementById('phoneNumber').value;
+    if (!phoneNumber) {
+        alert('Iltimos, telefon raqamingizni kiriting');
+        return;
+    }
+
+    // Here you would typically send the phone number to your backend
+    // For now, we'll just show the success modal
+    const premiumModal = bootstrap.Modal.getInstance(document.getElementById('premiumModal'));
+    premiumModal.hide();
+    
+    const successModal = new bootstrap.Modal(document.getElementById('successModal'));
+    successModal.show();
+});
+
+// Phone number input formatting
+document.getElementById('phoneNumber')?.addEventListener('input', function(e) {
+    let value = e.target.value.replace(/\D/g, '');
+    if (value.length > 0) {
+        value = value.match(new RegExp('.{1,2}', 'g')).join(' ');
+    }
+    e.target.value = value;
+});
+
 // Initialize page
 document.addEventListener('DOMContentLoaded', function() {
     // Add event listeners for buttons
