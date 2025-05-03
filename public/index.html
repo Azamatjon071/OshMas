@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OshMas - Diabetiklar uchun taomlar</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Uzbek Pattern Overlay -->
+    <div class="uzbek-pattern-overlay"></div>
+
+    <!-- Header Section -->
+    <header class="header">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container">
+                <a class="navbar-brand" href="#">
+                    <img src="images/logo.png" alt="OshMas Logo" height="40">
+                    OshMas
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#features">Xizmatlar</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#foods">Taomlar</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#about">Biz haqimizda</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contact">Aloqa</a>
+                        </li>
+                        <li class="nav-item" id="loginBtn">
+                            <button class="btn btn-outline-primary">Kirish</button>
+                        </li>
+                        <li class="nav-item dropdown" id="userMenu" style="display: none;">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                                <span id="userName"></span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#" onclick="logout()">Chiqish</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <h1>Diabetiklar uchun sog'lom taomlar</h1>
+                    <p class="lead">O'zbekistonning milliy taomlarini diabet bilan og'riganlar uchun maxsus tayyorlash usullari</p>
+                    <div class="hero-buttons">
+                        <button class="btn btn-primary btn-lg me-3" id="registerBtn">Ro'yxatdan o'tish</button>
+                        <a href="#foods" class="btn btn-outline-primary btn-lg">Taomlarni ko'rish</a>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <img src="images/hero.png" alt="Healthy Food" class="img-fluid rounded">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features-section" id="features">
+        <div class="container">
+            <h2 class="text-center mb-5">Bizning xizmatlar</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="feature-card">
+                        <i class="fas fa-utensils fa-3x mb-3"></i>
+                        <h3>Maxsus taomlar</h3>
+                        <p>Diabet turingizga mos keladigan taomlar ro'yxati va tavsiyalar</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="feature-card">
+                        <i class="fas fa-chart-line fa-3x mb-3"></i>
+                        <h3>Statistika</h3>
+                        <p>Kunlik ovqatlanish va qand miqdori statistikasi</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="feature-card">
+                        <i class="fas fa-bell fa-3x mb-3"></i>
+                        <h3>Eslatmalar</h3>
+                        <p>Ovqatlanish vaqti va dori qabul qilish eslatmalari</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Food Recommendations Section -->
+    <section class="food-recommendations" id="foods">
+        <div class="container">
+            <h2 class="text-center mb-5">Taomlar tavsiyalari</h2>
+            <div class="row" id="foodContainer">
+                <!-- Food cards will be dynamically added here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about-section" id="about">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <img src="images/about-image.jpg" alt="About Us" class="img-fluid rounded">
+                </div>
+                <div class="col-md-6">
+                    <h2>Biz haqimizda</h2>
+                    <p class="lead">OshMas - bu diabetiklar uchun maxsus yaratilgan platforma</p>
+                    <p>Biz O'zbekistonning milliy taomlarini diabet bilan og'rigan insonlar uchun moslashtirish va sog'lom ovqatlanishni ta'minlash uchun ishlaymiz.</p>
+                    <div class="stats row mt-4">
+                        <div class="col-4">
+                            <h3>1000+</h3>
+                            <p>Foydalanuvchilar</p>
+                        </div>
+                        <div class="col-4">
+                            <h3>50+</h3>
+                            <p>Taomlar</p>
+                        </div>
+                        <div class="col-4">
+                            <h3>24/7</h3>
+                            <p>Qo'llab-quvvatlash</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section" id="contact">
+        <div class="container">
+            <h2 class="text-center mb-5">Biz bilan bog'laning</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="contact-card">
+                        <i class="fas fa-phone fa-2x mb-3"></i>
+                        <h3>Telefon</h3>
+                        <p>+998 90 123 45 67</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="contact-card">
+                        <i class="fas fa-envelope fa-2x mb-3"></i>
+                        <h3>Email</h3>
+                        <p>info@oshmas.uz</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="contact-card">
+                        <i class="fas fa-map-marker-alt fa-2x mb-3"></i>
+                        <h3>Manzil</h3>
+                        <p>Toshkent shahri</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Food Details Modal -->
+    <div class="modal fade" id="foodDetailsModal" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Taom haqida batafsil</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body" id="foodDetailsBody">
+                    <!-- Food details will be dynamically added here -->
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Yopish</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Login Modal -->
+    <div class="modal fade" id="loginModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Kirish</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="loginForm">
+                        <div class="mb-3">
+                            <label for="loginEmail" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="loginEmail" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="loginPassword" class="form-label">Parol</label>
+                            <input type="password" class="form-control" id="loginPassword" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100">Kirish</button>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <p class="text-center w-100">Akkauntingiz yo'qmi? <a href="#" id="showRegisterBtn">Ro'yxatdan o'ting</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Register Modal -->
+    <div class="modal fade" id="registerModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Ro'yxatdan o'tish</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="registerForm">
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Ism</label>
+                            <input type="text" class="form-control" id="name" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="email" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="password" class="form-label">Parol</label>
+                            <input type="password" class="form-control" id="password" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="diabetesType" class="form-label">Diabet turi</label>
+                            <select class="form-select" id="diabetesType" required>
+                                <option value="1">1-tur diabet</option>
+                                <option value="2">2-tur diabet</option>
+                                <option value="prediabetic">Prediabet</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100">Ro'yxatdan o'tish</button>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <p class="text-center w-100">Akkauntingiz bormi? <a href="#" id="showLoginBtn">Kirish</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5>OshMas</h5>
+                    <p>Diabetiklar uchun sog'lom taomlar</p>
+                </div>
+                <div class="col-md-4">
+                    <h5>Aloqa</h5>
+                    <p>Email: info@oshmas.uz</p>
+                    <p>Telefon: +998 90 123 45 67</p>
+                </div>
+                <div class="col-md-4">
+                    <h5>Ijtimoiy tarmoqlar</h5>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-telegram"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html> 
